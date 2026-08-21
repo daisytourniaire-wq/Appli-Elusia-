@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbf7f2;
+  color: #241f1b;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-elusia-clay px-8 py-3.5 text-sm font-medium tracking-wide text-white transition-colors hover:bg-elusia-clay-dark disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-elusia-line bg-white px-8 py-3.5 text-sm font-medium tracking-wide text-elusia-ink transition-colors hover:bg-elusia-card;
+  }
+
+  .card {
+    @apply rounded-xl2 border border-elusia-line bg-white/70 p-6 shadow-sm backdrop-blur-sm;
+  }
+
+  .option-card {
+    @apply w-full cursor-pointer rounded-2xl border border-elusia-line bg-white px-5 py-4 text-left text-[15px] leading-snug text-elusia-ink transition-all hover:border-elusia-clay/60 hover:shadow-md;
+  }
+
+  .option-card-selected {
+    @apply border-elusia-clay bg-elusia-clay/5 shadow-md ring-1 ring-elusia-clay;
+  }
+}
